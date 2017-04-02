@@ -1,0 +1,894 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/ck86/main-bower-files">main-bower-files (v2.13.1)</a>
+</h1>
+<h4>Get main files from your installed bower packages.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.main-bower-files">module main-bower-files</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package">
+            function <span class="apidocSignatureSpan">main-bower-files.</span>package
+            <span class="apidocSignatureSpan">(opts, collection)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package_collection">
+            function <span class="apidocSignatureSpan">main-bower-files.</span>package_collection
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">main-bower-files.</span>package.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">main-bower-files.</span>package_collection.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.main-bower-files.package">module main-bower-files.package</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package.package">
+            function <span class="apidocSignatureSpan">main-bower-files.</span>package
+            <span class="apidocSignatureSpan">(opts, collection)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.main-bower-files.package.prototype">module main-bower-files.package.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package.prototype.addDependencies">
+            function <span class="apidocSignatureSpan">main-bower-files.package.prototype.</span>addDependencies
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package.prototype.collectData">
+            function <span class="apidocSignatureSpan">main-bower-files.package.prototype.</span>collectData
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package.prototype.getFiles">
+            function <span class="apidocSignatureSpan">main-bower-files.package.prototype.</span>getFiles
+            <span class="apidocSignatureSpan">(force)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.main-bower-files.package_collection">module main-bower-files.package_collection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package_collection.package_collection">
+            function <span class="apidocSignatureSpan">main-bower-files.</span>package_collection
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.main-bower-files.package_collection.prototype">module main-bower-files.package_collection.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package_collection.prototype.add">
+            function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>add
+            <span class="apidocSignatureSpan">(name, path, main)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package_collection.prototype.addDependencies">
+            function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>addDependencies
+            <span class="apidocSignatureSpan">(dependencies, group, bowerJson)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package_collection.prototype.checkGroupExists">
+            function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>checkGroupExists
+            <span class="apidocSignatureSpan">(group, bowerJson, error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package_collection.prototype.collectPackages">
+            function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>collectPackages
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package_collection.prototype.filterByGroup">
+            function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>filterByGroup
+            <span class="apidocSignatureSpan">(deps, group, bowerJson)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package_collection.prototype.getFiles">
+            function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>getFiles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.main-bower-files.package_collection.prototype.process">
+            function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>process
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.main-bower-files" id="apidoc.module.main-bower-files">module main-bower-files</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package" id="apidoc.element.main-bower-files.package">
+        function <span class="apidocSignatureSpan">main-bower-files.</span>package
+        <span class="apidocSignatureSpan">(opts, collection)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Package(opts, collection) {
+    this.collection     = collection;
+    this.name           = opts.name || null;
+    this.path           = opts.path || null;
+    this.main           = opts.main || null;
+    this.dependencies   = opts.dependencies;
+    this.ignore         = opts.ignore || false;
+    this.debugging      = collection.debugging || false;
+
+    if (this.ignore) {
+        return;
+    }
+
+    this.collectData();
+    this.addDependencies();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package_collection" id="apidoc.element.main-bower-files.package_collection">
+        function <span class="apidocSignatureSpan">main-bower-files.</span>package_collection
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PackageCollection(opts) {
+    this.opts               = opts;
+    this.opts.main          = opts.main || null;
+    this.opts.env           = opts.env || process.env.NODE_ENV;
+    this.debugging          = opts.debugging || false;
+    this.overrides          = opts.overrides || {};
+    this._queue             = [];
+    this._lastQueueLength   = 0;
+    this._packages          = {};
+    this._processed         = {};
+
+    this.collectPackages();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.main-bower-files.package" id="apidoc.module.main-bower-files.package">module main-bower-files.package</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package.package" id="apidoc.element.main-bower-files.package.package">
+        function <span class="apidocSignatureSpan">main-bower-files.</span>package
+        <span class="apidocSignatureSpan">(opts, collection)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Package(opts, collection) {
+    this.collection     = collection;
+    this.name           = opts.name || null;
+    this.path           = opts.path || null;
+    this.main           = opts.main || null;
+    this.dependencies   = opts.dependencies;
+    this.ignore         = opts.ignore || false;
+    this.debugging      = collection.debugging || false;
+
+    if (this.ignore) {
+        return;
+    }
+
+    this.collectData();
+    this.addDependencies();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.main-bower-files.package.prototype" id="apidoc.module.main-bower-files.package.prototype">module main-bower-files.package.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package.prototype.addDependencies" id="apidoc.element.main-bower-files.package.prototype.addDependencies">
+        function <span class="apidocSignatureSpan">main-bower-files.package.prototype.</span>addDependencies
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addDependencies = function () {
+    for (var name in this.dependencies) {
+        this.collection.add(name, path.join(this.path, '..', name));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.debugging      = collection.debugging || false;
+
+if (this.ignore) {
+    return;
+}
+
+this.collectData();
+this.<span class="apidocCodeKeywordSpan">addDependencies</span>();
+};
+
+Package.prototype = {
+/**
+ * Collects data from first found config file
+ */
+collectData: function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package.prototype.collectData" id="apidoc.element.main-bower-files.package.prototype.collectData">
+        function <span class="apidocSignatureSpan">main-bower-files.package.prototype.</span>collectData
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">collectData = function () {
+    var paths = [
+            path.join(this.path, '.bower.json'),
+            path.join(this.path, 'bower.json'),
+            path.join(this.path, 'package.json'),
+            path.join(this.path, 'component.json')
+        ],
+        data = paths.reduce(function(prev, curr) {
+            if (prev &amp;&amp; prev.main) {
+                return prev;
+            }
+
+            if (!exists(curr)) {
+                return prev;
+            }
+
+            try {
+                return JSON.parse(readFile(curr, 'utf8'));
+            } catch (e) {
+                return null;
+            }
+        }, null);
+
+    if (!data) {
+        return;
+    }
+
+    if (!this.main &amp;&amp; data.main) {
+        this.main = data.main;
+
+        if (this.debugging) {
+            logger('Package', 'overriding main', this.name, data.main);
+        }
+    }
+
+    if (!this.main &amp;&amp; this.collection.opts.checkExistence) {
+        throw new Error('Main property of package "' + this.name + '" is missing.');
+    }
+
+    if (this.dependencies === undefined &amp;&amp; data.dependencies &amp;&amp; data.dependencies) {
+        this.dependencies = data.dependencies;
+
+        if (this.debugging) {
+            logger('Package', 'overriding dependencies', this.name, data.dependencies);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.ignore         = opts.ignore || false;
+this.debugging      = collection.debugging || false;
+
+if (this.ignore) {
+    return;
+}
+
+this.<span class="apidocCodeKeywordSpan">collectData</span>();
+this.addDependencies();
+};
+
+Package.prototype = {
+/**
+ * Collects data from first found config file
+ */
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package.prototype.getFiles" id="apidoc.element.main-bower-files.package.prototype.getFiles">
+        function <span class="apidocSignatureSpan">main-bower-files.package.prototype.</span>getFiles
+        <span class="apidocSignatureSpan">(force)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFiles = function (force) {
+    var main = this.main = this.main || this.collection.opts.main,
+        files = [],
+        name;
+
+    if (main &amp;&amp; typeof main === 'object' &amp;&amp; !Array.isArray(main)) {
+        main = main[this.collection.opts.env];
+    }
+
+    if (this.ignore || !main) {
+        return files;
+    }
+
+    if (!Array.isArray(main)) {
+        main = [main];
+    }
+
+    if (force !== true) {
+        for (name in this.dependencies) {
+            if (this.collection._processed[name] !== true) {
+                return false;
+            }
+        }
+    }
+
+    main.forEach(function(pattern) {
+        if (pattern[0] === '/') {
+            throw new Error('absolute path in bower main is not supported');
+        }
+
+        var _files = globby(pattern, {
+            cwd: this.path
+        });
+
+        if (!_files.length &amp;&amp; this.collection.opts.checkExistence) {
+            throw new Error('File on path "' + path.join(this.path, pattern) +
+                '" does not exist.');
+        }
+
+        _files.forEach(function(file) {
+            files.push(path.join(this.path, file));
+        }, this);
+    }, this);
+
+    if (this.debugging) {
+        files.forEach(function(file) {
+            logger('Package', 'select file', this.name, file);
+        }, this);
+    }
+
+    return files;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+
+        this._lastQueueLength = queue.length;
+
+        this._queue = [];
+
+        queue.forEach(function(package) {
+var packageSrcs = package.<span class="apidocCodeKeywordSpan">getFiles</span>(force);
+
+if (packageSrcs === false) {
+    return this._queue.push(package);
+}
+
+srcs.push.apply(srcs, packageSrcs);
+this._processed[package.name] = true;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.main-bower-files.package_collection" id="apidoc.module.main-bower-files.package_collection">module main-bower-files.package_collection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package_collection.package_collection" id="apidoc.element.main-bower-files.package_collection.package_collection">
+        function <span class="apidocSignatureSpan">main-bower-files.</span>package_collection
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PackageCollection(opts) {
+    this.opts               = opts;
+    this.opts.main          = opts.main || null;
+    this.opts.env           = opts.env || process.env.NODE_ENV;
+    this.debugging          = opts.debugging || false;
+    this.overrides          = opts.overrides || {};
+    this._queue             = [];
+    this._lastQueueLength   = 0;
+    this._packages          = {};
+    this._processed         = {};
+
+    this.collectPackages();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.main-bower-files.package_collection.prototype" id="apidoc.module.main-bower-files.package_collection.prototype">module main-bower-files.package_collection.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package_collection.prototype.add" id="apidoc.element.main-bower-files.package_collection.prototype.add">
+        function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>add
+        <span class="apidocSignatureSpan">(name, path, main)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (name, path, main) {
+    if (this._packages[name]) {
+        return;
+    }
+
+    if (this.debugging) {
+        logger('PackageCollection', 'add', name, path);
+    }
+
+    this._packages[name] = true;
+
+    var opts = this.overrides[name] || {};
+    opts.name = name;
+    opts.path = path;
+    if (path.indexOf(this.opts.paths.bowerDirectory) === -1) {
+        opts.main = main || name;
+    }
+    opts.path = path;
+
+    this._packages[name] = new Package(opts, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+
+/**
+ * Adds package dependencies to the collection
+ */
+addDependencies: function() {
+    for (var name in this.dependencies) {
+        this.collection.<span class="apidocCodeKeywordSpan">add</span>(name, path.join(this.path, '..', name));
+    }
+},
+
+/**
+ * Gets main files of the package
+ *
+ * @param  {Boolean}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package_collection.prototype.addDependencies" id="apidoc.element.main-bower-files.package_collection.prototype.addDependencies">
+        function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>addDependencies
+        <span class="apidocSignatureSpan">(dependencies, group, bowerJson)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addDependencies = function (dependencies, group, bowerJson) {
+    if (typeof dependencies !== "string") {
+        var deps = (!!group) ? this.filterByGroup(dependencies, group, bowerJson) : dependencies;
+
+        for (var name in deps) {
+            this.add(name, path.join(this.opts.paths.bowerDirectory, path.sep, name));
+        }
+    } else {
+        this.add(dependencies, path.join(path.dirname(this.opts.paths.bowerJson)));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.debugging      = collection.debugging || false;
+
+if (this.ignore) {
+    return;
+}
+
+this.collectData();
+this.<span class="apidocCodeKeywordSpan">addDependencies</span>();
+};
+
+Package.prototype = {
+/**
+ * Collects data from first found config file
+ */
+collectData: function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package_collection.prototype.checkGroupExists" id="apidoc.element.main-bower-files.package_collection.prototype.checkGroupExists">
+        function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>checkGroupExists
+        <span class="apidocSignatureSpan">(group, bowerJson, error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkGroupExists = function (group, bowerJson, error) {
+    if(!group || !bowerJson.group) {
+        return;
+    }
+
+    if (typeof group === "string") {
+        var isExludingGroup = (group &amp;&amp; bowerJson.group &amp;&amp; group.charAt(0) === "!" &amp;&amp; bowerJson.group[group.slice(1)].length &gt; 0
+);
+
+        if(!bowerJson.group[group] &amp;&amp; !isExludingGroup) {
+            error(group);
+
+            return;
+        }
+
+        return bowerJson.group[group];
+    }
+
+    if (typeof group === "object") {
+        for (var i = 0; i &lt; group.length; i++) {
+            this.checkGroupExists(group[i], bowerJson, error);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    dependencies = bowerJson.dependencies || {},
+    main = bowerJson.main || {};
+
+includeDev = includeDev === true ? 'inclusive' : includeDev;
+
+this.overrides = extend(bowerJson.overrides || {}, this.overrides);
+
+this.<span class="apidocCodeKeywordSpan">checkGroupExists</span>(group, bowerJson, function (missingGroup) {
+    throw new Error('group "' + missingGroup + '" does not exists in bower.json');
+});
+
+if (includeDev !== 'exclusive') {
+    this.addDependencies(dependencies, group, bowerJson);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package_collection.prototype.collectPackages" id="apidoc.element.main-bower-files.package_collection.prototype.collectPackages">
+        function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>collectPackages
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">collectPackages = function () {
+    if (!exists(this.opts.paths.bowerJson)) {
+        throw new Error('bower.json does not exist at: ' + this.opts.paths.bowerJson);
+    }
+
+    var name,
+        group = this.opts.group || null,
+        includeDev = this.opts.includeDev || false,
+        includeSelf = this.opts.includeSelf || false,
+        bowerJson = JSON.parse(stripJsonComments(readFile(this.opts.paths.bowerJson, 'utf8'))),
+        devDependencies = bowerJson.devDependencies || {},
+        dependencies = bowerJson.dependencies || {},
+        main = bowerJson.main || {};
+
+    includeDev = includeDev === true ? 'inclusive' : includeDev;
+
+    this.overrides = extend(bowerJson.overrides || {}, this.overrides);
+
+    this.checkGroupExists(group, bowerJson, function (missingGroup) {
+        throw new Error('group "' + missingGroup + '" does not exists in bower.json');
+    });
+
+    if (includeDev !== 'exclusive') {
+        this.addDependencies(dependencies, group, bowerJson);
+    }
+
+    if (includeDev !== false) {
+        this.addDependencies(devDependencies, group, bowerJson);
+    }
+
+    if (includeSelf !== false) {
+        this.add(bowerJson.name || 'self', path.dirname(this.opts.paths.bowerJson), main);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.debugging          = opts.debugging || false;
+this.overrides          = opts.overrides || {};
+this._queue             = [];
+this._lastQueueLength   = 0;
+this._packages          = {};
+this._processed         = {};
+
+this.<span class="apidocCodeKeywordSpan">collectPackages</span>();
+};
+
+PackageCollection.prototype = {
+/**
+ * Adds a package to the collection
+ *
+ * @param {String} name Name of the package
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package_collection.prototype.filterByGroup" id="apidoc.element.main-bower-files.package_collection.prototype.filterByGroup">
+        function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>filterByGroup
+        <span class="apidocSignatureSpan">(deps, group, bowerJson)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filterByGroup = function (deps, group, bowerJson) {
+    var filtered = {};
+
+    if (typeof group === "string") {
+        var isExludingGroup = (group &amp;&amp; bowerJson.group &amp;&amp; group.charAt(0) === "!" &amp;&amp; bowerJson.group[group.slice(1)].length &gt; 0
+);
+
+        for (var dep in deps) {
+            if (isExludingGroup &amp;&amp; bowerJson.group[group.slice(1)].indexOf(dep) === -1) {
+                filtered[dep] = deps[dep];
+            }
+            if (!isExludingGroup &amp;&amp; bowerJson.group[group].indexOf(dep) &gt;= 0) {
+                filtered[dep] = deps[dep];
+            }
+        }
+
+        return filtered;
+    }
+
+    if (typeof group === "object") {
+        for (var i = 0; i &lt; group.length; i++) {
+            filtered = extend(filtered, this.filterByGroup(deps, group[i], bowerJson));
+        }
+    }
+
+    return filtered;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    /**
+     * Adds all dependencies from list filtered by group
+     *
+     */
+    addDependencies: function (dependencies, group, bowerJson) {
+if (typeof dependencies !== "string") {
+    var deps = (!!group) ? this.<span class="apidocCodeKeywordSpan">filterByGroup</span>(dependencies, group, bowerJson) : dependencies
+;
+
+    for (var name in deps) {
+        this.add(name, path.join(this.opts.paths.bowerDirectory, path.sep, name));
+    }
+} else {
+    this.add(dependencies, path.join(path.dirname(this.opts.paths.bowerJson)));
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package_collection.prototype.getFiles" id="apidoc.element.main-bower-files.package_collection.prototype.getFiles">
+        function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>getFiles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFiles = function () {
+    for (var name in this._packages) {
+        this._queue.push(this._packages[name]);
+    }
+
+    return this.process();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+
+        this._lastQueueLength = queue.length;
+
+        this._queue = [];
+
+        queue.forEach(function(package) {
+var packageSrcs = package.<span class="apidocCodeKeywordSpan">getFiles</span>(force);
+
+if (packageSrcs === false) {
+    return this._queue.push(package);
+}
+
+srcs.push.apply(srcs, packageSrcs);
+this._processed[package.name] = true;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.main-bower-files.package_collection.prototype.process" id="apidoc.element.main-bower-files.package_collection.prototype.process">
+        function <span class="apidocSignatureSpan">main-bower-files.package_collection.prototype.</span>process
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function () {
+    var queue = this._queue,
+        srcs = [],
+        force = false;
+
+    if (this._lastQueueLength === queue.length) {
+        force = true;
+    }
+
+    this._lastQueueLength = queue.length;
+
+    this._queue = [];
+
+    queue.forEach(function(package) {
+        var packageSrcs = package.getFiles(force);
+
+        if (packageSrcs === false) {
+            return this._queue.push(package);
+        }
+
+        srcs.push.apply(srcs, packageSrcs);
+        this._processed[package.name] = true;
+    }, this);
+
+    if (this._queue.length) {
+        srcs.push.apply(srcs, this.process());
+    }
+
+    return srcs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @return {Array}
+ */
+getFiles: function() {
+    for (var name in this._packages) {
+        this._queue.push(this._packages[name]);
+    }
+
+    return this.<span class="apidocCodeKeywordSpan">process</span>();
+},
+
+/**
+ * processes the queue and returns the srcs of all packages
+ *
+ * @private
+ * @return {Array}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
