@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"main-bower-files",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "main-bower-files",
+    "description": "api documentation for [main-bower-files (v2.13.1)](https://github.com/ck86/main-bower-files) [![npm package](https://img.shields.io/npm/v/npmdoc-main-bower-files.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-main-bower-files) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-main-bower-files.svg)](https://travis-ci.org/npmdoc/node-npmdoc-main-bower-files)",
     "devDependencies": {
-        "main-bower-files": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "main-bower-files": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-main-bower-files",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-main-bower-files",
+    "keywords": [
+        "documentation",
+        "main-bower-files"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_main_bower_files.js",
+    "name": "npmdoc-main-bower-files",
+    "nameAlias": "npmdoc_main_bower_files",
+    "nameOriginal": "npmdoc-main-bower-files",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-main-bower-files.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
