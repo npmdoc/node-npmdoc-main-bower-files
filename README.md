@@ -1,6 +1,6 @@
 # npmdoc-main-bower-files
 
-#### api documentation for  [main-bower-files (v2.13.1)](https://github.com/ck86/main-bower-files)  [![npm package](https://img.shields.io/npm/v/npmdoc-main-bower-files.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-main-bower-files) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-main-bower-files.svg)](https://travis-ci.org/npmdoc/node-npmdoc-main-bower-files)
+#### basic api documentation for  [main-bower-files (v2.13.1)](https://github.com/ck86/main-bower-files)  [![npm package](https://img.shields.io/npm/v/npmdoc-main-bower-files.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-main-bower-files) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-main-bower-files.svg)](https://travis-ci.org/npmdoc/node-npmdoc-main-bower-files)
 
 #### Get main files from your installed bower packages.
 
@@ -75,7 +75,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "2.13.1"
+    "version": "2.13.1",
+    "bin": {}
 }
 ```
 
