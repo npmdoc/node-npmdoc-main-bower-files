@@ -459,21 +459,21 @@
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-this.debugging      = collection.debugging || false;
+this.overrides = extend(bowerJson.overrides || {}, this.overrides);
 
-if (this.ignore) {
-    return;
+this.checkGroupExists(group, bowerJson, function (missingGroup) {
+    throw new Error('group "' + missingGroup + '" does not exists in bower.json');
+});
+
+if (includeDev !== 'exclusive') {
+    this.<span class="apidocCodeKeywordSpan">addDependencies</span>(dependencies, group, bowerJson);
 }
 
-this.collectData();
-this.<span class="apidocCodeKeywordSpan">addDependencies</span>();
-};
+if (includeDev !== false) {
+    this.addDependencies(devDependencies, group, bowerJson);
+}
 
-Package.prototype = {
-/**
- * Collects data from first found config file
- */
-collectData: function() {
+if (includeSelf !== false) {
 ...</pre></li>
     </ul>
 
@@ -614,21 +614,21 @@ Package.prototype = {
     return files;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-        }
+    opts.paths = {
+bowerJson: bowerJson,
+bowerDirectory: bowerDirectory
+    };
 
-        this._lastQueueLength = queue.length;
+    try {
+collection = new PackageCollection(opts);
+files = collection.<span class="apidocCodeKeywordSpan">getFiles</span>();
 
-        this._queue = [];
-
-        queue.forEach(function(package) {
-var packageSrcs = package.<span class="apidocCodeKeywordSpan">getFiles</span>(force);
-
-if (packageSrcs === false) {
-    return this._queue.push(package);
-}
-
-srcs.push.apply(srcs, packageSrcs);
-this._processed[package.name] = true;
+if (typeof opts.filter === 'string' || Array.isArray(opts.filter)) {
+    files = multimatch(files, opts.filter, {dot: true});
+} else if (opts.filter instanceof RegExp) {
+    files = files.filter(function(file) {
+        return opts.filter.test(file);
+    });
 ...</pre></li>
     </ul>
 
@@ -698,21 +698,22 @@ this._processed[package.name] = true;
     this._packages[name] = new Package(opts, this);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-},
+    }
 
-/**
- * Adds package dependencies to the collection
- */
-addDependencies: function() {
-    for (var name in this.dependencies) {
-        this.collection.<span class="apidocCodeKeywordSpan">add</span>(name, path.join(this.path, '..', name));
+    if (includeDev !== false) {
+        this.addDependencies(devDependencies, group, bowerJson);
+    }
+
+    if (includeSelf !== false) {
+        this.<span class="apidocCodeKeywordSpan">add</span>(bowerJson.name || 'self', path.dirname(this.opts.paths.bowerJson
+), main);
     }
 },
 
 /**
- * Gets main files of the package
+ * Adds all dependencies from list filtered by group
  *
- * @param  {Boolean}
+ */
 ...</pre></li>
     </ul>
 
@@ -737,21 +738,21 @@ addDependencies: function() {
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-this.debugging      = collection.debugging || false;
+this.overrides = extend(bowerJson.overrides || {}, this.overrides);
 
-if (this.ignore) {
-    return;
+this.checkGroupExists(group, bowerJson, function (missingGroup) {
+    throw new Error('group "' + missingGroup + '" does not exists in bower.json');
+});
+
+if (includeDev !== 'exclusive') {
+    this.<span class="apidocCodeKeywordSpan">addDependencies</span>(dependencies, group, bowerJson);
 }
 
-this.collectData();
-this.<span class="apidocCodeKeywordSpan">addDependencies</span>();
-};
+if (includeDev !== false) {
+    this.addDependencies(devDependencies, group, bowerJson);
+}
 
-Package.prototype = {
-/**
- * Collects data from first found config file
- */
-collectData: function() {
+if (includeSelf !== false) {
 ...</pre></li>
     </ul>
 
@@ -941,21 +942,21 @@ if (typeof dependencies !== "string") {
     return this.process();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-        }
+    opts.paths = {
+bowerJson: bowerJson,
+bowerDirectory: bowerDirectory
+    };
 
-        this._lastQueueLength = queue.length;
+    try {
+collection = new PackageCollection(opts);
+files = collection.<span class="apidocCodeKeywordSpan">getFiles</span>();
 
-        this._queue = [];
-
-        queue.forEach(function(package) {
-var packageSrcs = package.<span class="apidocCodeKeywordSpan">getFiles</span>(force);
-
-if (packageSrcs === false) {
-    return this._queue.push(package);
-}
-
-srcs.push.apply(srcs, packageSrcs);
-this._processed[package.name] = true;
+if (typeof opts.filter === 'string' || Array.isArray(opts.filter)) {
+    files = multimatch(files, opts.filter, {dot: true});
+} else if (opts.filter instanceof RegExp) {
+    files = files.filter(function(file) {
+        return opts.filter.test(file);
+    });
 ...</pre></li>
     </ul>
 
